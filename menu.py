@@ -10,6 +10,8 @@
 
 import os
 from infixToPrefixAndPostfix import infixToPrefixAndPostfix
+#from prefixToInfixAndPostfix import prefixToInfixAndPostfix
+#from postfixToPrefixAndInfix import postfixToPrefixAndInfix
 
 choice = True
 while choice:
@@ -19,8 +21,8 @@ while choice:
     print("=" * 50)
     
     print("[1] = Infix to Prefix and Postfix")
-    print("[2] = Postfix to Prefix and Infix")
-    print("[3] = Prefix to Infix and Postfix")
+    print("[2] = Prefix to Infix and Postfix")
+    print("[3] = Postfix to Prefix and Infix")
     print("[0] = Exit")
 
     choice = input("\n>>Enter your choice: ")
@@ -31,14 +33,14 @@ while choice:
         infixToPrefixAndPostfix()
 
     elif choice == '2':
-        print("\nYou choose: Postfix to Prefix and Infix")
-        print("Calling the function...")
-        #postfixToPrefixAndInfix
-
-    elif choice == '3':
         print("\nYou choose: Prefix to Infix and Postfix")
         print("Calling the function...")
-        #prefixToInfixAndPostfix
+        #prefixToInfixAndPostfix()
+
+    elif choice == '3':
+        print("\nYou choose: Postfix to Prefix and Infix")
+        print("Calling the function...")
+        #postfixToPrefixAndInfix()
 
     elif choice == '0':
         print("\nYou choose Exit.")
