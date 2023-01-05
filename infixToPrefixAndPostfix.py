@@ -1,4 +1,8 @@
 def infixToPrefixAndPostfix():
+    import colorama
+    from colorama import Fore, Back, Style
+    colorama.init(autoreset = True)
+
     def Con1():
         oprtr = {'+', '-', '*', '/', '(', ')', '^'}
         pr1 = {'+': 1, '-': 1, '*': 2, '/': 2, '^': 3}  # level of priority for operators
@@ -50,25 +54,27 @@ def infixToPrefixAndPostfix():
             return rev[::-1]  # returns a reversed version of inf2postfix(e1)
 
         while True:
-            infix = input("\nEnter an Infix Expression: ")
+            infix = input(Fore.LIGHTGREEN_EX + "\nEnter an Infix Expression: ")
             operators = ["+", "-", "*", "/", "^"]
+
             if infix.startswith(tuple(operators)):
-                print("This is already in prefix notation")
+                print(Fore.LIGHTRED_EX + Back.WHITE + "This is already in prefix notation")
+
             elif infix.endswith(tuple(operators)):
-                print("This is already in postfix notation")
+                print(Fore.LIGHTRED_EX + Back.WHITE + "This is already in postfix notation")
+
             else:
                 prefix = inf2prefix(infix)  # Gets the prefix notation using inf2prefix () function
-                print("\nPrefix notation:", end=' ')
+                print(Fore.LIGHTCYAN_EX + Style.BRIGHT + "Prefix notation:", end=' ')
                 for ch in prefix:
                     print(ch, end='')
                 print()
 
                 postfix = inf2postfix(infix)  # Gets the prefix notation using inf2prefix () function
-                print("Postfix notation:", end=' ')
+                print(Fore.LIGHTCYAN_EX + Style.BRIGHT + "Postfix notation:", end=' ')
                 for ch in postfix:
                     print(ch, end='')
                 print()
                 break
             break
-
     Con1()  # calls main function
