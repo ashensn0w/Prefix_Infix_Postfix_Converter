@@ -1,46 +1,49 @@
 """
     Group 4:
-        Brigola, Jaycee T.
-        Cruz, Jan Miles P.
-        Jugueta, Ashley Sheine N.
-        Levardo, John Race T.
-        Malapit, Sthanly Paul L.
-        Pastor, Nathalie G.
+            Brigola, Jaycee T.
+            Cruz, Jan Miles P.
+            Jugueta, Ashley Sheine N.
+            Levardo, John Race T.
+            Malapit, Sthanly Paul L.
+            Pastor, Nathalie G.
 """
 
 import os
+import colorama
+from colorama import Fore, Back, Style
 from infixToPrefixAndPostfix import infixToPrefixAndPostfix
-#from prefixToInfixAndPostfix import prefixToInfixAndPostfix
-#from postfixToPrefixAndInfix import postfixToPrefixAndInfix
+from prefixToInfixAndPostfix import prefixToInfixAndPostfix
+from postfixToPrefixAndInfix import postfixToPrefixAndInfix
 
+colorama.init(autoreset = True)
 choice = True
+
 while choice:
     print("\n")
     print("=" * 50)
-    print("\t\t    MAIN MENU")
+    print(Fore.LIGHTYELLOW_EX + Back.BLACK + "\t\t    MAIN MENU")
     print("=" * 50)
-    
-    print("[1] = Infix to Prefix and Postfix")
-    print("[2] = Prefix to Infix and Postfix")
-    print("[3] = Postfix to Prefix and Infix")
-    print("[0] = Exit")
+    print(Fore.CYAN + "[1] = Infix to Prefix and Postfix")
+    print(Fore.GREEN + "[2] = Prefix to Infix and Postfix")
+    print(Fore.BLUE + "[3] = Postfix to Prefix and Infix")
+    print(Fore.RED + "[0] = Exit")
 
-    choice = input("\n>>Enter your choice: ")
+    choice = input(Fore.MAGENTA + Back.LIGHTWHITE_EX + Style.BRIGHT + "\n>>Enter your choice: ")
 
     if choice == '1':
-        print("\nYou choose: Infix to Prefix and Postfix.")
-        print("Calling the function...")
+        print("\nYou chose: Infix to Prefix and Postfix.")
+        print(Fore.GREEN + "Calling the function...")
         infixToPrefixAndPostfix()
 
     elif choice == '2':
-        print("\nYou choose: Prefix to Infix and Postfix")
-        print("Calling the function...")
-        #prefixToInfixAndPostfix()
+        print("\nYou chose: Prefix to Infix and Postfix")
+        print(Fore.GREEN + "Calling the function...")
+        prefixToInfixAndPostfix()
 
     elif choice == '3':
-        print("\nYou choose: Postfix to Prefix and Infix")
-        print("Calling the function...")
-        #postfixToPrefixAndInfix()
+        print("\nYou chose: Postfix to Prefix and Infix")
+        print(Fore.GREEN + "Calling the function...")
+        postfixToPrefixAndInfix()
 
     elif choice == '0':
         print("\nYou choose Exit.")
