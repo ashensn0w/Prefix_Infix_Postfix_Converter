@@ -69,6 +69,6 @@ def infixToPrefixAndPostfix():
                     print(ch, end='')
                 print()
                 break
-
+            break
 
     Con1()  # calls main function
