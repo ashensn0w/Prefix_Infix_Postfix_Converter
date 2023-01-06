@@ -48,5 +48,8 @@ def prefixToInfixAndPostfix():
 
     # input and output
     expression = input("\nPlease enter a prefix expresssion: ")
-    print('Infix:', PrefixtoInfix(expression))
-    print('Postfix:', PrefixtoPostfix(expression))
+    print("-" * 50)
+    print("\t\t      RESULT")
+    print("-" * 50)
+    print('Infix notation:', PrefixtoInfix(expression))
+    print('Postfix notation:', PrefixtoPostfix(expression))
