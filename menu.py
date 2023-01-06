@@ -46,7 +46,7 @@ while choice:
         postfixToPrefixAndInfix()
 
     elif choice == '0':
-        print("\nYou choose Exit.")
+        print("\nYou chose Exit.")
         print("\nThank you for using this program!")
         os._exit(0)
 
