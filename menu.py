@@ -28,7 +28,7 @@ while choice:
     print(Fore.BLUE + "[3] = Postfix to Prefix and Infix")
     print(Fore.RED + "[0] = Exit")
 
-    choice = input(Fore.MAGENTA + Back.LIGHTWHITE_EX + Style.BRIGHT + "\n>>Enter your choice: ")
+    choice = input("\n>>Please enter your choice: ")
 
     if choice == '1':
         print("\nYou chose: Infix to Prefix and Postfix.")
